@@ -7,33 +7,114 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
     *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-    body{background:#0b2d85;color:#fff;overflow-x:hidden}
-    .hero{padding:120px 20px;text-align:center;background:#103a9d}
-    .hero img{width:140px;height:140px;border-radius:100%;margin-bottom:15px;border:4px solid #fff}
+    body{background:#ffe6ef;color:#4a2c2c;overflow-x:hidden}
+
+    /* HERO SECTION */
+    .hero{
+        padding:120px 20px;
+        text-align:center;
+        background:#ffb7c5;
+        color:#5a2a2a;
+    }
+    .hero img{
+        width:150px;height:150px;border-radius:100%;
+        margin-bottom:15px;border:4px solid #fff;
+        box-shadow:0 5px 20px rgba(0,0,0,0.15);
+    }
     .name{font-size:38px;font-weight:700}
     .title{font-size:18px;opacity:.9;margin-top:5px}
-    .desc{max-width:600px;margin:15px auto;opacity:.85;line-height:1.6}
+    .desc{max-width:650px;margin:15px auto;opacity:.85;line-height:1.6}
+
     .info{margin-top:15px;font-size:14px;opacity:.9}
     .info span{margin:0 10px}
-    .section{padding:60px 20px;max-width:1000px;margin:auto}
-    h2{font-size:26px;margin-bottom:25px;font-weight:700}
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-    .card{background:#fff;color:#000;padding:20px;border-radius:14px;box-shadow:0 5px 20px rgba(0,0,0,.15)}
-    .badge{background:#e6f3ff;padding:6px 12px;border-radius:8px;margin-right:5px;font-size:12px;font-weight:600;color:#004aad;display:inline-block}
-    .exp-item,.edu-item{background:#fff;color:#000;padding:20px;border-radius:14px;margin-bottom:18px;box-shadow:0 5px 20px rgba(0,0,0,.15)}
-    .exp-item h3,.edu-item h3{font-size:18px;font-weight:700;margin-bottom:5px}
-    .exp-item small,.edu-item small{background:#d6eaff;padding:5px 10px;border-radius:6px;font-size:12px;color:#004aad;font-weight:600}
-    footer{text-align:center;padding:25px 0;opacity:.8;font-size:14px;margin-top:60px}
+
+    /* SECTION BASE */
+    .section{
+        padding:60px 20px;
+        max-width:1000px;
+        margin:auto;
+    }
+    h2{
+        font-size:26px;
+        margin-bottom:25px;
+        font-weight:700;
+        color:#b02a50;
+    }
+
+    /* CARDS */
+    .cards{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+        gap:20px;
+    }
+    .card{
+        background:#fff;
+        color:#5a2a2a;
+        padding:22px;
+        border-radius:16px;
+        box-shadow:0 6px 25px rgba(255,160,176,0.6);
+    }
+    .badge{
+        background:#ffe2ea;
+        padding:6px 12px;
+        border-radius:8px;
+        margin-right:5px;
+        font-size:12px;
+        font-weight:600;
+        color:#d10050;
+        display:inline-block;
+    }
+
+    /* EXPERIENCE + EDUCATION BOXES */
+    .exp-item,.edu-item{
+        background:#fff;
+        color:#5a2a2a;
+        padding:22px;
+        border-radius:16px;
+        margin-bottom:18px;
+        box-shadow:0 6px 25px rgba(255,160,176,0.6);
+    }
+    .exp-item h3,.edu-item h3{
+        font-size:18px;font-weight:700;margin-bottom:5px
+    }
+    .exp-item small,.edu-item small{
+        background:#ffd2df;padding:5px 10px;border-radius:6px;
+        font-size:12px;color:#b02a50;font-weight:600
+    }
+
+    /* FOOTER */
+    footer{
+        text-align:center;padding:25px 0;
+        opacity:.8;font-size:14px;margin-top:60px;
+        color:#5a2a2a;
+    }
+
+    /* DARK MODE */
+    body.light{
+        background:#ffffff;
+        color:#000;
+    }
+
+    @media(max-width:768px){
+        section{padding:60px 6%;}
+        h1{font-size:1.8em;}
+        h2{font-size:1.6em;}
+    }
 </style>
 </head>
 <body>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <section class="hero">
     <img src="https://pbs.twimg.com/media/GA_OkFNb0AANz1v?format=jpg&name=large" alt="profile">
     <div class="name">Angela Merici Corel Han</div>
     <div class="title">HCI & Data-Driven Product Enthusiast</div>
-    <p class="desc">Saya Angel berusia 20 tahun, saya mahasiswa Semester 5 S1 Sistem Informasi di Universitas Katolik Indonesia Atma Jaya. Saya memiliki minar pada dunia data science dan UI/UX. Saat ini saya aktif mempelajari berbagai bahasa pemrograman, khususnya pada pengembangan backend dan frontend.</p>
+
+    <p class="desc">
+        Saya Angel berusia 20 tahun, mahasiswa Sistem Informasi Universitas Katolik Indonesia Atma Jaya.
+        Saya memiliki minat pada data science, UI/UX, dan pengembangan aplikasi.
+    </p>
+
     <p class="info">
         <span>📧 angelahan2912@gmail.com</span>
         <span>📍 Tangerang Selatan, Indonesia</span>
@@ -42,31 +123,33 @@
 
 <!-- SKILLS -->
 <section class="section">
-<h2>⚡ Key Skills</h2>
-<div class="cards">
-    <div class="card">
-        <h3>MySQL</h3><br>
-        <span class="badge">Excel</span>
-        <span class="badge">Google Sheet</span>
-        <span class="badge">Data Processing</span>
-    </div>
+    <h2>💖 Key Skills</h2>
+    <div class="cards">
 
-    <div class="card">
-        <h3>Product & Design</h3><br>
-        <span class="badge">Figma</span>
-        <span class="badge">Canva</span>
-        <span class="badge">Design Thinking</span>
+        <div class="card">
+            <h3>MySQL</h3><br>
+            <span class="badge">Excel</span>
+            <span class="badge">Google Sheet</span>
+            <span class="badge">Data Processing</span>
+        </div>
+
+        <div class="card">
+            <h3>Product & Design</h3><br>
+            <span class="badge">Figma</span>
+            <span class="badge">Canva</span>
+            <span class="badge">Design Thinking</span>
+        </div>
+
     </div>
-</div>
 </section>
 
 <!-- EXPERIENCE -->
 <section class="section">
 <h2>📁 Experience</h2>
 <div class="exp-item">
-    <h3>Job Title Kamu</h3>
-    <small>2023- sekarang</small>
-    <p> Menjadi bagian dari divisi Eksternal Himpunan Mahasiswa Sistem Informasi<br></p>
+    <h3>Divisi Eksternal HMSI</h3>
+    <small>2023 - Sekarang</small>
+    <p>Menjadi bagian dari divisi Eksternal Himpunan Mahasiswa Sistem Informasi.</p>
 </div>
 </section>
 
@@ -79,61 +162,29 @@
 </div>
 </section>
 
-<footer>© 2025 Angegla Merici Corel Han • Latihan Deployment</footer>
+<footer>© 2025 Angela Merici Corel Han • Pink Aesthetic Portfolio</footer>
 
-
-<!-- ====== SKILLS SECTION ====== -->
-<section id="skills" style="padding:80px 10%;background:#111a5a;text-align:center;">
-<h2 style="font-size:2.2em;margin-bottom:20px;font-weight:700;">Skills</h2>
-<div style="display:flex;justify-content:center;flex-wrap:wrap;gap:15px;">
-<span style="background:#1a45c4;padding:10px 18px;border-radius:8px;">HTML</span>
-<span style="background:#1a45c4;padding:10px 18px;border-radius:8px;">CSS</span>
-<span style="background:#1a45c4;padding:10px 18px;border-radius:8px;">JavaScript</span>
-<span style="background:#1a45c4;padding:10px 18px;border-radius:8px;">UI/UX</span>
-<span style="background:#1a45c4;padding:10px 18px;border-radius:8px;">React Basic</span>
-</div></section>
-
-<!-- ====== EXPERIENCE SECTION ====== -->
-<section id="experience" style="padding:80px 10%;background:#0b2d85;text-align:center;">
-<h2 style="font-size:2.2em;margin-bottom:20px;font-weight:700;">Experience</h2>
-<p style="max-width:700px;margin:auto;line-height:1.6;">Saya memiliki pengalaman membuat landing page, portfolio web, hingga project UI sederhana untuk UMKM. Terbiasa bekerja menggunakan Git serta standar clean-code.</p>
-</section>
-
-<!-- ====== AWARDS SECTION ====== -->
-<section id="awards" style="padding:80px 10%;background:#111a5a;text-align:center;">
-<h2 style="font-size:2.2em;margin-bottom:20px;font-weight:700;">Awards & Certificates</h2>
-<ul style="list-style:none;font-size:1.1em;line-height:1.8;"> 
-<li>🔥 Finalis UI/UX Competition 2024</li>
-<li>🏅 Best Website Design UMKM Project</li>
-<li>📄 Sertifikat Frontend Basic & Git</li>
-</ul></section>
-
-<!-- ====== DARK/LIGHT MODE TOGGLE ====== -->
-<script>
-function toggleTheme(){
-const b=document.body;
-b.classList.toggle('light');
-}
-</script>
-<button onclick="toggleTheme()" style="position:fixed;bottom:20px;right:20px;padding:10px 18px;border-radius:50px;background:#fff;color:#000;font-weight:600;cursor:pointer;">Mode 🌙/☀️</button>
-
-<!-- ====== SOCIAL MEDIA ICONS ====== -->
-<div style="text-align:center;margin-top:60px;">
-<a href="#" style="margin:0 10px;font-size:1.7em;text-decoration:none;color:#fff;transition:.3s;">🐦</a>
-<a href="#" style="margin:0 10px;font-size:1.7em;text-decoration:none;color:#fff;transition:.3s;">💼</a>
-<a href="#" style="margin:0 10px;font-size:1.7em;text-decoration:none;color:#fff;transition:.3s;">📷</a>
+<!-- SOCIAL ICONS -->
+<div style="text-align:center;margin-top:40px;">
+    <a href="#" style="margin:0 10px;font-size:1.7em;text-decoration:none;color:#b02a50;">🐦</a>
+    <a href="#" style="margin:0 10px;font-size:1.7em;text-decoration:none;color:#b02a50;">💼</a>
+    <a href="#" style="margin:0 10px;font-size:1.7em;text-decoration:none;color:#b02a50;">📷</a>
 </div>
 
-<!-- SMOOTH RESPONSIVE CSS -->
-<style>
-@media(max-width:768px){
-section{padding:60px 6%;}
-h1{font-size:1.8em;}
-h2{font-size:1.6em;}
+<!-- TOGGLE THEME -->
+<script>
+function toggleTheme(){
+    const body=document.body;
+    body.classList.toggle('light');
 }
-body.light{background:#eaeaea;color:#000;}
-</style>
+</script>
+
+<button onclick="toggleTheme()" 
+style="position:fixed;bottom:20px;right:20px;padding:10px 18px;border-radius:50px;
+background:#ff9bb0;color:#fff;font-weight:600;cursor:pointer;border:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);">
+Mode 🌙/☀️
+</button>
 
 </body>
 </html>
-
